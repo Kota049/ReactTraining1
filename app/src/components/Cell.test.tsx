@@ -4,6 +4,10 @@ import Cell from './Cell';
 describe('Cell', () => {
   it('show button', () => {
     render(<Cell />);
-    expect(screen.getByRole('button')).not.toBeNull();
+    expect(getButton()).not.toBeNull();
   });
 });
+
+const getButton = (): HTMLElement => {
+  return screen.getByRole('button');
+};
