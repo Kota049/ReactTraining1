@@ -1,6 +1,7 @@
 import DangerousIcon from '@mui/icons-material/Dangerous';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import useIcon from '../hooks/useIcon';
+import { memo } from 'react';
 
 const Cell = ({ onClick = () => {} }) => {
   const [icon, updateIcon] = useIcon();
@@ -16,4 +17,4 @@ const Cell = ({ onClick = () => {} }) => {
   );
 };
 
-export default Cell;
+export default memo(Cell);
