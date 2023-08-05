@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import Cell from './Cell';
 import userEvent from '@testing-library/user-event';
 
@@ -14,6 +14,12 @@ describe('Cell', () => {
     await userEvent.click(button);
 
     expect(clickEvent).toHaveBeenCalled();
+  });
+  it('button has icon', () => {
+    render(<Cell />);
+    const button = getButton();
+    const icon = within(button).getByTestId('DangerousIcon');
+    expect(icon).not.toBeNull();
   });
 });
 
