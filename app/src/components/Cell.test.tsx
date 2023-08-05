@@ -20,6 +20,14 @@ describe('Cell', () => {
     const icon = within(getButton()).getByTestId('DangerousIcon');
     expect(icon).not.toBeNull();
   });
+  it('when button clicked, Icon Change', async () => {
+    render(<Cell />);
+    const button = getButton();
+    await userEvent.click(button);
+    expect(
+      within(button).getByTestId('RadioButtonUncheckedIcon')
+    ).not.toBeNull();
+  });
 });
 
 const getButton = (): HTMLElement => {
