@@ -13,6 +13,6 @@ describe('useIcon for toggle icon', () => {
     act(() => {
       updateMethod();
     });
-    expect(iconStatus).toBe('FULL');
+    expect(result.current[0]).toBe('FULL');
   });
 });
