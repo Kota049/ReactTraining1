@@ -2,10 +2,10 @@ import { useState } from 'react';
 
 const useIcon = (): [IconStatus, () => void] => {
   const [icon, setIcon] = useState<IconStatus>('VACANT');
-  const togle = () => {
-    setIcon('FULL');
+  const toggle = () => {
+    setIcon('VACANT' === icon ? 'FULL' : 'VACANT');
   };
-  return [icon, togle];
+  return [icon, toggle];
 };
 export default useIcon;
 type IconStatus = 'VACANT' | 'FULL';

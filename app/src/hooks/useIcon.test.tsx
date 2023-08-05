@@ -9,7 +9,7 @@ describe('useIcon for toggle icon', () => {
   });
   it('when function called, IconStatus become FULL', () => {
     const { result } = renderHook(useIcon);
-    const [iconStatus, updateMethod] = result.current;
+    const updateMethod = result.current[1];
     act(() => {
       updateMethod();
     });
