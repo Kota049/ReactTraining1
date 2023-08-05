@@ -1,3 +1,5 @@
-const Cell = () => {};
+const Cell = () => {
+  return <button />;
+};
 
 export default Cell;
