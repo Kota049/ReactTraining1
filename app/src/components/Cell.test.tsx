@@ -17,16 +17,14 @@ describe('Cell', () => {
   });
   it('button has icon', () => {
     render(<Cell />);
-    const icon = within(getButton()).getByTestId('DangerousIcon');
+    const icon = within(getButton()).getByTestId('RadioButtonUncheckedIcon');
     expect(icon).not.toBeNull();
   });
   it('when button clicked, Icon Change', async () => {
     render(<Cell />);
     const button = getButton();
     await userEvent.click(button);
-    expect(
-      within(button).getByTestId('RadioButtonUncheckedIcon')
-    ).not.toBeNull();
+    expect(within(button).getByTestId('DangerousIcon')).not.toBeNull();
   });
 });
 
