@@ -8,7 +8,7 @@ describe('Cell', () => {
     expect(getButton()).not.toBeNull();
   });
   it('when button click,arg function called', async () => {
-    const clickEvent = jest.fn;
+    const clickEvent = jest.fn();
     render(<Cell onClick={clickEvent} />);
     const button = getButton();
     await userEvent.click(button);
