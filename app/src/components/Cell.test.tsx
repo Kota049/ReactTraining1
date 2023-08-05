@@ -17,8 +17,7 @@ describe('Cell', () => {
   });
   it('button has icon', () => {
     render(<Cell />);
-    const button = getButton();
-    const icon = within(button).getByTestId('DangerousIcon');
+    const icon = within(getButton()).getByTestId('DangerousIcon');
     expect(icon).not.toBeNull();
   });
 });
