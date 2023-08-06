@@ -1,5 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
-import useTable, { DateStatus } from './useTable';
+import useTable from './useTable';
+import { DateStatus } from '../types';
 
 describe('useTable', () => {
   it('return arg object', () => {

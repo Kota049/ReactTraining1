@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconStatus } from './useIcon';
+import { DateStatus } from '../types';
 
 const useTable = ({
   initialDateStatus,
@@ -26,9 +26,3 @@ type Props = {
 };
 
 export default useTable;
-
-export interface DateStatus {
-  startTime: Date;
-  endTime: Date;
-  status: IconStatus;
-}

@@ -1,6 +1,6 @@
 import DangerousIcon from '@mui/icons-material/Dangerous';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-import useIcon, { IconStatus } from '../hooks/useIcon';
+import { IconStatus } from '../types';
 import { memo } from 'react';
 
 const Cell = ({ onClick = () => {}, status = 'VACANT' }) => {
