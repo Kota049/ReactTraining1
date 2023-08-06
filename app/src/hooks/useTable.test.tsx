@@ -3,7 +3,6 @@ import useTable, { DateStatus } from './useTable';
 
 describe('useTable', () => {
   it('return arg object', () => {
-    const { result } = renderHook(useTable);
     const initialDateStatus: DateStatus[] = [
       {
         startTime: new Date(2023, 8, 7, 9, 0),
@@ -16,6 +15,7 @@ describe('useTable', () => {
         status: 'VACANT',
       },
     ];
+    const { result } = renderHook(() => useTable({ initialDateStatus }));
     expect(result.current[0]).toEqual(initialDateStatus);
   });
 });

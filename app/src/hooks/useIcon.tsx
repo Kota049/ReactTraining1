@@ -8,4 +8,4 @@ const useIcon = (): [IconStatus, () => void] => {
   return [icon, toggle];
 };
 export default useIcon;
-type IconStatus = 'VACANT' | 'FULL';
+export type IconStatus = 'VACANT' | 'FULL';
