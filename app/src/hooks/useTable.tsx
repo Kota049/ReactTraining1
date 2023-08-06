@@ -1,6 +1,8 @@
 import { IconStatus } from './useIcon';
 
-const useTable = ({ initialDateStatus }: Props): [DateStatus[], () => void] => {
+const useTable = ({
+  initialDateStatus,
+}: Props): [DateStatus[], (startTime: Date) => void] => {
   return [initialDateStatus, () => {}];
 };
 
