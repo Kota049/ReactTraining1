@@ -34,7 +34,7 @@ describe('useTable', () => {
     const { result } = renderHook(() => useTable({ initialDateStatus }));
 
     act(() => {
-      result.current[1](new Date(2023, 8, 7, 9, 30));
+      result.current[1](new Date(2023, 8, 7, 9, 0));
     });
 
     expect(result.current[0][0]).toStrictEqual({
