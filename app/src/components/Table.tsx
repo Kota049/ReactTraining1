@@ -1,9 +1,21 @@
-import { Table } from '@mui/material';
+import { Table, TableCell, TableHead, TableRow } from '@mui/material';
 
 const DateTable = () => {
   return (
     <>
-      <Table></Table>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>8/8</TableCell>
+            <TableCell>8/9</TableCell>
+            <TableCell>8/10</TableCell>
+            <TableCell>8/11</TableCell>
+            <TableCell>8/12</TableCell>
+            <TableCell>8/13</TableCell>
+            <TableCell>8/14</TableCell>
+          </TableRow>
+        </TableHead>
+      </Table>
     </>
   );
 };

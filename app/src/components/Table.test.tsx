@@ -11,11 +11,11 @@ describe('Table component', () => {
     const table = screen.getByRole('table');
     const th_list = table.getElementsByTagName('th');
     expect(th_list[0].textContent).toBe('8/8');
-    expect(th_list[0].textContent).toBe('8/9');
-    expect(th_list[0].textContent).toBe('8/10');
-    expect(th_list[0].textContent).toBe('8/11');
-    expect(th_list[0].textContent).toBe('8/12');
-    expect(th_list[0].textContent).toBe('8/13');
-    expect(th_list[0].textContent).toBe('8/14');
+    expect(th_list[1].textContent).toBe('8/9');
+    expect(th_list[2].textContent).toBe('8/10');
+    expect(th_list[3].textContent).toBe('8/11');
+    expect(th_list[4].textContent).toBe('8/12');
+    expect(th_list[5].textContent).toBe('8/13');
+    expect(th_list[6].textContent).toBe('8/14');
   });
 });
