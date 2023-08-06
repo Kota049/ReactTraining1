@@ -1,20 +1,23 @@
 import DangerousIcon from '@mui/icons-material/Dangerous';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-import useIcon from '../hooks/useIcon';
+import useIcon, { IconStatus } from '../hooks/useIcon';
 import { memo } from 'react';
 
-const Cell = ({ onClick = () => {} }) => {
-  const [icon, updateIcon] = useIcon();
+const Cell = ({ onClick = () => {}, status = 'VACANT' }) => {
   return (
     <button
       onClick={() => {
-        updateIcon();
         onClick();
       }}
     >
-      {icon == 'VACANT' ? <RadioButtonUncheckedIcon /> : <DangerousIcon />}
+      {status == 'VACANT' ? <RadioButtonUncheckedIcon /> : <DangerousIcon />}
     </button>
   );
+};
+
+type Props = {
+  onClick: () => void;
+  status: IconStatus;
 };
 
 export default memo(Cell);

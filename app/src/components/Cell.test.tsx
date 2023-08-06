@@ -20,10 +20,9 @@ describe('Cell', () => {
     const icon = within(getButton()).getByTestId('RadioButtonUncheckedIcon');
     expect(icon).not.toBeNull();
   });
-  it('when button clicked, Icon Change', async () => {
-    render(<Cell />);
+  it('render Icon depened on arg', async () => {
+    render(<Cell status="FULL" />);
     const button = getButton();
-    await userEvent.click(button);
     expect(within(button).getByTestId('DangerousIcon')).not.toBeNull();
   });
 });
