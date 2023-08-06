@@ -1,3 +1,11 @@
-const Table = () => {};
+import { Table } from '@mui/material';
 
-export default Table;
+const DateTable = () => {
+  return (
+    <>
+      <Table />
+    </>
+  );
+};
+
+export default DateTable;
