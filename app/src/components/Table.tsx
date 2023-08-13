@@ -21,7 +21,11 @@ const DateTable = () => {
             <TableCell>8/14</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody></TableBody>
+        <TableBody>
+          <TableRow>
+            <th>8:00~9:00</th>
+          </TableRow>
+        </TableBody>
       </Table>
     </>
   );
