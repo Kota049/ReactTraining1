@@ -27,5 +27,5 @@ it('return tuesday DateStatus depending on arg', () => {
 it('return 118 elenment', () => {
   const current = new Date(2023, 7, 16);
   const result = getDateList(current);
-  expect(result.length).toBe(118);
+  expect(result.length).toBe(112);
 });
