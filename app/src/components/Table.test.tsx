@@ -18,4 +18,12 @@ describe('Table component', () => {
     expect(th_list[5].textContent).toBe('8/13');
     expect(th_list[6].textContent).toBe('8/14');
   });
+  it('table has row headding th', () => {
+    render(<DateTable />);
+    const table = screen.getByRole('table');
+    const table_body = table.getElementsByTagName('tr');
+    expect(table_body[1].getElementsByTagName('th')[0].textContent).toBe(
+      '8:00~9:00'
+    );
+  });
 });

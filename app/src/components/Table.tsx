@@ -1,4 +1,10 @@
-import { Table, TableCell, TableHead, TableRow } from '@mui/material';
+import {
+  Table,
+  TableCell,
+  TableHead,
+  TableRow,
+  TableBody,
+} from '@mui/material';
 
 const DateTable = () => {
   return (
@@ -15,6 +21,7 @@ const DateTable = () => {
             <TableCell>8/14</TableCell>
           </TableRow>
         </TableHead>
+        <TableBody></TableBody>
       </Table>
     </>
   );
