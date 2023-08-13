@@ -42,8 +42,10 @@ describe('Table component', () => {
     const table = screen.getByRole('table');
     const table_body = table.getElementsByTagName('tr');
     const tds = table_body[1].getElementsByTagName('td');
-    await userEvent.click(tds[0]);
+    await userEvent.click(tds[0].getElementsByTagName('button')[0]);
 
-    expect(within(tds[0]).getByTestId('DangerousIcon')).not.toBeNull();
+    const new_tds = table_body[1].getElementsByTagName('td');
+
+    expect(within(new_tds[0]).getByTestId('DangerousIcon')).not.toBeNull();
   });
 });
