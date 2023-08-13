@@ -1,5 +1,6 @@
 import { render, screen, within } from '@testing-library/react';
 import DateTable from './Table';
+import userEvent from '@testing-library/user-event';
 
 describe('Table component', () => {
   it('table has table', () => {
@@ -35,5 +36,14 @@ describe('Table component', () => {
     expect(
       within(tds[0]).getByTestId('RadioButtonUncheckedIcon')
     ).not.toBeNull();
+  });
+  it('when button clicked , icon changed', async () => {
+    render(<DateTable />);
+    const table = screen.getByRole('table');
+    const table_body = table.getElementsByTagName('tr');
+    const tds = table_body[1].getElementsByTagName('td');
+    await userEvent.click(tds[0]);
+
+    expect(within(tds[0]).getByTestId('DangerousIcon')).not.toBeNull();
   });
 });

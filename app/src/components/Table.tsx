@@ -29,12 +29,24 @@ const DateTable = () => {
             <TableCell>
               <Cell />
             </TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
+            <TableCell>
+              <Cell />
+            </TableCell>
+            <TableCell>
+              <Cell />
+            </TableCell>
+            <TableCell>
+              <Cell />
+            </TableCell>
+            <TableCell>
+              <Cell />
+            </TableCell>
+            <TableCell>
+              <Cell />
+            </TableCell>
+            <TableCell>
+              <Cell />
+            </TableCell>
           </TableRow>
         </TableBody>
       </Table>
