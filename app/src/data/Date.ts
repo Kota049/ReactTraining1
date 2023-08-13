@@ -1,10 +1,28 @@
 import { DateStatus } from '../types';
 
 const getDateList = (now: Date): DateStatus[] => {
+  let diff = 2 - now.getDay();
+  if (diff > 0) {
+    diff = diff - 7;
+  }
+  now.setDate(now.getDate() + diff);
+
   return [
     {
-      startTime: new Date(2023, 8, 8, 8, 0),
-      endTime: new Date(2023, 8, 8, 8, 30),
+      startTime: new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate(),
+        8,
+        0
+      ),
+      endTime: new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate(),
+        8,
+        30
+      ),
       status: 'VACANT',
     },
   ];
