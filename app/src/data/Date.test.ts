@@ -12,3 +12,15 @@ it('return tuesday DateStatus', () => {
 
   expect(result[0]).toEqual(expected);
 });
+
+it('return tuesday DateStatus depending on arg', () => {
+  const current = new Date(2023, 8, 16);
+  const result = getDateList(current);
+  const expected: DateStatus = {
+    startTime: new Date(2023, 8, 15, 8, 0),
+    endTime: new Date(2023, 8, 15, 8, 30),
+    status: 'VACANT',
+  };
+
+  expect(result[0]).toEqual(expected);
+});
